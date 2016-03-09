@@ -10,7 +10,7 @@ RUN echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-or
 RUN apt-get update 
 RUN apt-get install -y mongodb-org
 
-# Data directory volume
+# Volume mapping[data directory]
 RUN mkdir -p /data/db
 VOLUME ["/data/db"]
 
